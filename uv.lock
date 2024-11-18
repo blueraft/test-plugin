@@ -3636,6 +3636,7 @@ plugins = [
     { name = "nomad-schema-plugin-simulation-workflow" },
     { name = "nomad-simulations" },
     { name = "perovskite-solar-cell-database" },
+    { name = "plugin-test" },
     { name = "pynxtools", extra = ["convert"] },
 ]
 
@@ -3660,6 +3661,7 @@ requires-dist = [
     { name = "nomad-schema-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-simulations", marker = "extra == 'plugins'", specifier = "==0.0.1" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=b29cbbd808a6c9c0c45cdd10c6e7982375342d9f#b29cbbd808a6c9c0c45cdd10c6e7982375342d9f" },
+    { name = "plugin-test", marker = "extra == 'plugins'", git = "https://github.com/PauloGitHB/plugin_test.git" },
     { name = "pynxtools", extras = ["convert"], marker = "extra == 'plugins'", specifier = "==0.5.0" },
 ]
 
@@ -4671,6 +4673,15 @@ source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages
 sdist = { url = "https://files.pythonhosted.org/packages/96/2d/02d4312c973c6050a18b314a5ad0b3210edb65a906f868e31c111dede4a6/pluggy-1.5.0.tar.gz", hash = "sha256:2cffa88e94fdc978c4c574f15f9e59b7f4201d439195c3715ca9e2486f1d0cf1", size = 67955 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/88/5f/e351af9a41f866ac3f1fac4ca0613908d9a41741cfcf2228f4ad853b697d/pluggy-1.5.0-py3-none-any.whl", hash = "sha256:44e1ad92c8ca002de6377e165f3e0f1be63266ab4d554740532335b9d75ea669", size = 20556 },
+]
+
+[[package]]
+name = "plugin-test"
+version = "0.1.0"
+source = { git = "https://github.com/PauloGitHB/plugin_test.git#0705b80fe0078500cb889bc09e9cb461c949ba28" }
+dependencies = [
+    { name = "nomad-lab" },
+    { name = "python-magic-bin", marker = "sys_platform == 'win32'" },
 ]
 
 [[package]]
